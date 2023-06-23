@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Django Registration Redux
+    'django.contrib.sites',
+    "registration",
+    # Apps por defecto
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Mis apps
-    'home',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +135,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Django Registration Redux
+LOGIN_REDIRECT_URL = "/" # URL de redirección al loguearse
+ACCOUNT_ACTIVATION_DAYS = 7 # Dias de espera para activar el usuario.
+REGISTRATION_AUTO_LOGIN = True # Loguea al usuario automaticamente.
+SITE_ID = 1
