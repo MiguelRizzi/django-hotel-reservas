@@ -1,52 +1,30 @@
 {% extends 'layout.html' %}
+{% load static %}
 
-{% block header %}
-    <div class="bg-image d-flex justify-content-center align-items-center" style="background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg'); height: 70vh; width: 100vw; background-position: center; background-size: cover;">
-        {% block h1 %}
-            <h1 class="fw-bolder display-2 text-white p-5" style="background-color: rgba(0,0,0,0.4); width: 100vw; text-align: center;">El Jardin Secreto </h1>
-        {% endblock h1 %}
-    </div>
-{% endblock header %}
+{% block title %}App Hotel{% endblock title %}
 
 {% block content %}
-
-<section>
-    <h3 class="fw-bolder display-5 mb-4">Habitaciones</h2>
-        
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="card" style="width: 25rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Reservar</a>
-                </div>
+    {% if user.is_staff %}
+        <div class="container mt-lg-3">
+            <h2 class="display-6 mb-4">Tipo de Habitacion</h3>
+            <div class="d-grid gap-3">
+                <a href="{% url 'hotel:tipohabitacion_create' %}" class="btn btn-primary">Crear tipo de Habitacion</a>
+                <a href="{% url 'hotel:tipohabitacion_list' %}" class="btn btn-primary">Ver tipo de Habitaciones</a> <br>
+            </div>
+            
+            <h2 class="display-6 mb-4">Habitaciones</h3>
+            <div class="d-grid gap-3">
+                <a href="{% url 'hotel:habitacion_create' %}" class="btn btn-primary">Crear Habitacion</a>
+                <a href="{% url 'hotel:habitacion_list' %}" class="btn btn-primary">Ver Habitaciones</a> <br>
+            </div>
+                
+            <h2 class="display-5 mb-4">Reservas</h3>
+            <div class="d-grid gap-3">
+                <a href="{% url 'hotel:reserva_create' %}" class="btn btn-primary">Crear Reserva</a>
+                <a href="{% url 'hotel:reserva_list' %}" class="btn btn-primary">Ver Reservas</a> <br>
             </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="card" style="width: 25rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reservar</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="card" style="width: 25rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reservar</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{% endblock %}
+    {% endif %}
+{% endblock content %}
+    
+    

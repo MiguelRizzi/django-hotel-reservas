@@ -30,3 +30,17 @@ class HabitacionAdmin(admin.ModelAdmin):
         "tipo",
         "numero",
     )
+
+@admin.register(models.Reserva)
+class ReservaAdmin(admin.ModelAdmin):
+    list_display = (
+        "cliente",
+        "habitacion",
+        "fecha_entrada",
+        "fecha_salida",
+        "precio_total",
+    )
+    search_fields = ("cliente__username", "habitacion__tipo__nombre")
+    ordering = ("fecha_entrada",)
+    list_filter = ("fecha_entrada",)
+
