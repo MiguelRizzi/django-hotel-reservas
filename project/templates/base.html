@@ -11,11 +11,17 @@
 	</head>
 	<body>
 		{% include 'navbar.html' %}
-
-		{% block content %}
-		{% endblock %}
-
-		{% include 'footer.html' %}
+		<header>
+			{% block header %}{% endblock %}
+		</header>
+	
+		<main class="container">
+			{% block content %}{% endblock %}
+		</main>
+		
+		<footer>
+			{% include 'footer.html' %}
+		</footer>
 		
 		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 	</body>

@@ -6,7 +6,7 @@ import time
 # Create your models here.
 
 class InfoUsuario(models.Model):
-    usuario = models.ForeignKey(User, blank=False, null=True, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(User, blank=False, null=True, on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to="avatars/%Y/%m/%d", default='default/avatar.png', blank=True, null=True) 
     nacimiento = models.DateField(blank=True, null=True)
     pais = models.CharField(max_length=30, blank=True)
