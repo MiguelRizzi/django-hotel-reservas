@@ -13,9 +13,15 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+# sys.path para agregar la ruta de la carpeta "apps"
+import sys
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# append de la ruta de la carpeta "apps" al sys.path para que se pueda importar las apps correctamente.
+APPS_DIR = os.path.join(BASE_DIR, 'apps')
+sys.path.append(str(APPS_DIR))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
