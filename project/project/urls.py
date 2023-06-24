@@ -23,6 +23,7 @@ urlpatterns = [
     path('accounts/', include('registration.backends.default.urls')),
     path("", include(("home.urls", "home"))),
     path("usuarios/", include(("usuarios.urls", "usuarios"))),
+    path("hotel/", include(("hotel.urls", "hotel"))),
 ] 
 
 # Valido en entorno de desarrollo: DEBUG= True

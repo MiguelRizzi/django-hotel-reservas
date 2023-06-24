@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # Mis apps
     'home.apps.HomeConfig',
     'usuarios.apps.UsuariosConfig',
+    'hotel.apps.HotelConfig',
 ]
 
 MIDDLEWARE = [
