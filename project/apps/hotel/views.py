@@ -1,10 +1,20 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
-from django.views.generic import DetailView, ListView
+from django.views.generic import TemplateView, DetailView, ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from . import models, forms 
 from django.contrib import messages
 
+
+#   Index hotel
+class IndexView(TemplateView):
+    template_name = "hotel/index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["habitaciones"] = models.Habitacion.objects.all()
+        return context
+    
 # Tipo de Habitacion
 
 class TipoHabitacionDetail(LoginRequiredMixin, DetailView):
@@ -103,7 +113,7 @@ class ReservaDetail(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 class ReservaList(LoginRequiredMixin, ListView):
     model = models.Reserva
     def get_queryset(self):
-        """Si el usuario no es un miembro del staff, solo
+        """Si el usuario no es un miembro del staff, muestra solo
         objetos que pertenecen al usuario que realiza la solicitud."""
         queryset = super().get_queryset()
         if not self.request.user.is_staff:
@@ -131,7 +141,8 @@ class ReservaDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     template_name = "hotel/confirm_delete.html"
     success_url = reverse_lazy("hotel:reserva_list")
     def test_func(self):
-        """Determina el acceso a la vista, devuelve True si el usuario es el cliente o si es personal del staff, False de lo contrario."""
+        """Determina el acceso a la vista, devuelve True si el usuario es el cliente o si es personal del staff, 
+        False de lo contrario."""
         reserva = self.get_object()
         return reserva.cliente == self.request.user or self.request.user.is_staff
     

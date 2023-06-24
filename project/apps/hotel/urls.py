@@ -4,7 +4,7 @@ from . import views
 from django.contrib.admin.views.decorators import staff_member_required
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="hotel/index.html"), name="index"),
+    path("", views.IndexView.as_view(), name="index"),
     # Tipo de habitacion
     path("tipohabitacion/detail/<int:pk>", staff_member_required(views.TipoHabitacionDetail.as_view()), name="tipohabitacion_detail"),
     path("tipohabitacion/list/", staff_member_required(views.TipoHabitacionList.as_view()), name="tipohabitacion_list"),
