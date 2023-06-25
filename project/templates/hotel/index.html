@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-
+{% load static %}
 {% block header %}
     <div class="bg-image d-flex justify-content-center align-items-center" style="background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg'); height: 70vh; width: 100vw; background-position: center; background-size: cover;">
         {% block h1 %}
@@ -11,21 +11,22 @@
 {% block title %}App Hotel{% endblock title %}
 
 {% block content %}
+
     {% if user.is_staff %}
         <div class="container mt-lg-3">
-            <h2 class="display-6 mb-4">Tipo de Habitacion</h3>
+            <h2 class="fw-bolder display-5 mb-4">Tipo de Habitacion</h3>
             <div class="d-grid gap-3">
                 <a href="{% url 'hotel:tipohabitacion_create' %}" class="btn btn-primary">Crear tipo de Habitacion</a>
                 <a href="{% url 'hotel:tipohabitacion_list' %}" class="btn btn-primary">Ver tipo de Habitaciones</a> <br>
             </div>
             
-            <h2 class="display-6 mb-4">Habitaciones</h3>
+            <h2 class="fw-bolder display-5 mb-4">Habitaciones</h3>
             <div class="d-grid gap-3">
                 <a href="{% url 'hotel:habitacion_create' %}" class="btn btn-primary">Crear Habitacion</a>
                 <a href="{% url 'hotel:habitacion_list' %}" class="btn btn-primary">Ver Habitaciones</a> <br>
             </div>
                 
-            <h2 class="display-6 mb-4">Reservas</h3>
+            <h2 class="fw-bolder display-5 mb-4">Reservas</h3>
             <div class="d-grid gap-3">
                 <a href="{% url 'hotel:reserva_create' %}" class="btn btn-primary">Crear Reserva</a>
                 <a href="{% url 'hotel:reserva_list' %}" class="btn btn-primary">Ver Reservas</a> <br>
@@ -33,16 +34,16 @@
         </div>
     {% else %}
         <div class="mb-5">
-            <h3 h2 class="display-6 mb-4">Habitaciones</h2>
+            <h2 class="fw-bolder display-5 mb-4">Habitaciones</h2>
                 
             <div class="row">
                 {% for habitacion in habitaciones %}
                     <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card" style="width: 25rem;">
+                        <div class="card mb-4" style="width: 25rem;">
                             {% if habitacion.imagen %}
-                                <img class="card-img-top" src="{{ habitacion.imagen.url }}" alt="Card image cap">
+                                <img class="card-img-top w-100" src="{{ habitacion.imagen.url }}" alt="Imagen Habitacion {{ habitacion.numero }}">
                             {% else %}
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top w-100" src="{% static 'img/hotel/img-no-disponible.jpg' %}" alt="Imagen Habitacion {{ habitacion.numero }}">
                             {% endif %}
                             <div class="card-body">
                             <h5 class="card-title">Habitacion Nro: {{ habitacion.numero }}</h5>
@@ -53,7 +54,7 @@
                     </div>
                 {% endfor %}
             </div>  
-            <h2 class="display-6 mb-4">Reservas</h3>
+            <h2 class="fw-bolder display-5 mb-4">Reservas</h3>
                 <div class="d-grid gap-3">
                     <a href="{% url 'hotel:reserva_create' %}" class="btn btn-primary">Reservar</a>
                     <a href="{% url 'hotel:reserva_list' %}" class="btn btn-primary">Mis Reservas</a> <br>

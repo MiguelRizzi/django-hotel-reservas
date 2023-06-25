@@ -1,6 +1,7 @@
 {% extends 'hotel/list.html' %}
 
-<h2 class="display-5 mb-4">Lista de reservas</h2>
+{% block h2 %}Lista de reservas{% endblock %}
+
 {% block search %}
     <!-- Sirve para buscar reservas. Se pasa a la variable consulta de la vista. -->
     <div class="py-lg-4">
