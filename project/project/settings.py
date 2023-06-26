@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'usuarios.apps.UsuariosConfig',
     'hotel.apps.HotelConfig',
+    # Apps de terceros
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -54,11 +54,14 @@
                     </div>
                 {% endfor %}
             </div>  
-            <h2 class="fw-bolder display-5 mb-4">Reservas</h3>
-                <div class="d-grid gap-3">
-                    <a href="{% url 'hotel:reserva_create' %}" class="btn btn-primary">Reservar</a>
-                    <a href="{% url 'hotel:reserva_list' %}" class="btn btn-primary">Mis Reservas</a> <br>
-                </div>
+            <div class="d-grid gap-3 my-5">
+                <a href="{% url 'hotel:habitacion_list' %}" class="btn btn-outline-dark">Listado de Habitaciones</a>
+            </div>
+            <h2 class="fw-bolder display-5 m-4">Reservas</h3>
+            <div class="d-grid gap-3">
+                <a href="{% url 'hotel:reserva_create' %}" class="btn btn-outline-dark">Reservar</a>
+                <a href="{% url 'hotel:reserva_list' %}" class="btn btn-outline-dark">Mis Reservas</a> 
+            </div>
         </div>
     {% endif %}
 {% endblock content %}
