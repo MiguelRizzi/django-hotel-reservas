@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'usuarios.apps.UsuariosConfig',
     'hotel.apps.HotelConfig',
+    'blog.apps.BlogConfig',
     # Apps de terceros
     'widget_tweaks',
 ]

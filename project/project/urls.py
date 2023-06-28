@@ -24,6 +24,7 @@ urlpatterns = [
     path("", include(("home.urls", "home"))),
     path("usuarios/", include(("usuarios.urls", "usuarios"))),
     path("hotel/", include(("hotel.urls", "hotel"))),
+    path("blog/", include(("blog.urls", "blog"))),
 ] 
 
 # Valido en entorno de desarrollo: DEBUG= True
