@@ -1,8 +1,8 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Logged out" %}{% endblock %}
+{% block title %}{% trans "Logout" %}{% endblock %}
 
 {% block content %}
-<p>{% trans "Successfully logged out" %}.</p>
+<p class="alert alert-danger">{% trans "Has cerrado sesión exitosamente. " %}.</p>
 {% endblock %}

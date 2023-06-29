@@ -1,7 +1,5 @@
 from django.urls import path
-from django.views.generic import TemplateView
 from . import views
-from django.contrib.admin.views.decorators import staff_member_required
 
 urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),

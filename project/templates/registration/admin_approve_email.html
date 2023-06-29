@@ -9,20 +9,20 @@
 <body>
 <p>
     {% blocktrans with site_name=site.name %}
-    The following user ({{ user }}) has asked to register an account at
+    El usuario ({{ user }}) registro una cuenta en 
     {{ site_name }}.
     {% endblocktrans %}
 </p>
 <p>
     {% blocktrans %}
-    To approve this, please
+    Para aprobarla, por favor haz clic en el siguiente enlace.
     {% endblocktrans %}
     <a href="http://{{site.domain}}{% url 'registration_admin_approve' profile_id %}"> {% trans "click here" %}</a>.
 </p>
 <p>
     {% blocktrans with site_name=site.name %}
-    Sincerely,
-    {{ site_name }} Management
+    Atentamente, Administracion de
+    {{ site_name }} 
     {% endblocktrans %}
 </p>
 </body>

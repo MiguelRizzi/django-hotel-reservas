@@ -1,12 +1,12 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Account Activation Resent" %}{% endblock %}
+{% block title %}{% trans "Reenvío de activación de cuenta" %}{% endblock %}
 
 {% block content %}
-<p>
+<p class="alert alert-success">
   {% blocktrans %}
-  We have sent an email to {{ email }} with further instructions.
+  Hemos enviado un correo electrónico a {{ email }} con instrucciones adicionales.
   {% endblocktrans %}
 </p>
 {% endblock %}

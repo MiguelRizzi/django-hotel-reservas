@@ -1,16 +1,17 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Account Activated" %}{% endblock %}
+{% block title %}{% trans "Cuenta activada" %}{% endblock %}
 
 {% block content %}
-<p>
-    {% trans "Your account is now activated." %}
+<p class="alert alert-success">
+    {% trans "Tu cuenta se activo correctamente." %}
     {% if not user.is_authenticated %}
-    {% trans "Once a site administrator activates your account you can login." %}
+    {% trans "Una vez que un administrador del sitio active tu cuenta, puedes iniciar sesión." %}
     {% endif %}
 </p>
 {% endblock %}
+
 
 
 {% comment %}

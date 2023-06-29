@@ -7,7 +7,7 @@ import time
 
 class InfoUsuario(models.Model):
     usuario = models.OneToOneField(User, blank=False, null=True, on_delete=models.CASCADE)
-    avatar = models.ImageField(upload_to="avatars/%Y/%m/%d", default='default/avatar.png', blank=True, null=True) 
+    avatar = models.ImageField(upload_to="avatars/%Y/%m/%d", blank=True, null=True) 
     nacimiento = models.DateField(blank=True, null=True)
     pais = models.CharField(max_length=30, blank=True)
     provincia = models.CharField(max_length=40, blank=True)

@@ -1,10 +1,10 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Approval Failure" %}{% endblock %}
+{% block title %}{% trans "Fallo la aprobación" %}{% endblock %}
 
 {% block content %}
-<p>{% trans "Account Approval failed." %}</p>
+<p class="alert alert-danger">{% trans "La aprobación de la cuenta ha fallado." %}</p>
 {% endblock %}
 
 

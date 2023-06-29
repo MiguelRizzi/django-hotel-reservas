@@ -3,13 +3,13 @@
 <html lang="en">
 
 <head>
-    <title>{{ site.name }} {% trans "admin approval" %}</title>
+    <title>{{ site.name }} {% trans "Aprobación de cuenta" %}</title>
 </head>
 
 <body>
-<p>
+<p class="alert alert-successs">
     {% blocktrans %}
-    Your account is now approved. You can 
+    Tu cuenta ha sido aprobada.
     {% endblocktrans %}
     <a href="http://{{site.domain}}{% url 'auth_login' %}">{% trans "log in." %}</a>
 </p>

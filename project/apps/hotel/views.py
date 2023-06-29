@@ -27,6 +27,7 @@ class TipoHabitacionDetail(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 class TipoHabitacionList(LoginRequiredMixin, UserPassesTestMixin, ListView):
     model = models.TipoHabitacion
     def get_queryset(self):
+        """Filtra todos los tipos de habitaciones que contengan el texto ingresado."""
         if self.request.GET.get("consulta"):
             query = self.request.GET.get("consulta")
             object_list = models.TipoHabitacion.objects.filter(nombre__icontains=query)
@@ -82,6 +83,7 @@ class HabitacionDetail(LoginRequiredMixin, DetailView):
 class HabitacionList(LoginRequiredMixin, ListView):
     model = models.Habitacion
     def get_queryset(self):
+        """Filtra todas las habitaciones que contengan el texto ingresado."""
         if self.request.GET.get("consulta"):
             query = self.request.GET.get("consulta")
             object_list = models.Habitacion.objects.filter(numero__icontains=query)

@@ -1,10 +1,12 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Activation email sent" %}{% endblock %}
+{% block title %}{% trans "Correo electrónico de activación enviado" %}{% endblock %}
 
 {% block content %}
-<p>{% trans "Please check your email, {{ request.session.registration_email }}, to complete the registration process." %}</p>
+    <p class="alert alert-success">
+        {% trans "Por favor, verifica tu correo electrónico, {{ request.session.registration_email }}, para completar el proceso de registro." %}
+    </p>
 {% endblock %}
 
 

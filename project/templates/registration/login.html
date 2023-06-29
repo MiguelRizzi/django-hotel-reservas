@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load widget_tweaks %}
 
-{% block title %}{% trans "Log in" %}{% endblock %}
+{% block title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
 <form method="post" action="">
@@ -14,12 +14,12 @@
         </div>
     {% endfor %}
     <div class="d-grid gap-3 mt-4">
-        <input type="submit" value="{% trans 'Login' %}" class="btn btn-success" />
+        <button type="submit" class="btn btn-success">{% trans 'Login' %}</button>
     </div>
 </form>
 
-<p>{% trans "Forgot your password?" %} <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>.</p>
-<p>{% trans "Not a member?" %} <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>.</p>
+<p>{% trans "¿Olvidaste tu contraseña?" %} <a href="{% url 'auth_password_reset' %}">{% trans "Reestablecer contraseña" %}</a>.</p>
+<p>{% trans "¿No eres miembro?" %} <a href="{% url 'registration_register' %}">{% trans "Registrarse" %}</a>.</p>
 {% endblock %}
 
 

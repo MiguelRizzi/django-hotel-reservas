@@ -1,14 +1,12 @@
 {% extends 'layout.html' %}
 {% load static %}
 {% block header %}
-    <div class="bg-image d-flex justify-content-center align-items-center" style="background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg'); height: 70vh; width: 100vw; background-position: center; background-size: cover;">
-        {% block h1 %}
-            <h1 class="fw-bolder display-2 text-white p-5" style="background-color: rgba(0,0,0,0.4); width: 100vw; text-align: center;">El Jardin Secreto </h1>
-        {% endblock h1 %}
+    <div class="bg-image d-flex justify-content-center align-items-center div-header fondo-2">
+        {% block title %}
+            <h1 class="fw-bolder display-2 text-white p-5 h1-header">El Jardin Secreto </h1>
+        {% endblock %}
     </div>
-{% endblock header %}
-
-{% block title %}App Hotel{% endblock title %}
+{% endblock %}
 
 {% block content %}
 
@@ -53,7 +51,8 @@
                         </div>
                     </div>
                 {% endfor %}
-            </div>  
+            </div>
+              
             <div class="d-grid gap-3 my-5">
                 <a href="{% url 'hotel:habitacion_list' %}" class="btn btn-outline-dark">Listado de Habitaciones</a>
             </div>

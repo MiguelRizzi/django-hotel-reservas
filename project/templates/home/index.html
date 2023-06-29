@@ -3,22 +3,22 @@
 
 
 {% block header %}
-    <div class="bg-image d-flex justify-content-center align-items-center" style="background-image: url('https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg'); height: 70vh; width: 100vw; background-position: center; background-size: cover;">
-        {% block h1 %}
-            <h1 class="fw-bolder display-2 text-white p-5" style="background-color: rgba(0,0,0,0.4); width: 100vw; text-align: center;">Hotel el Jardin Secreto </h1>
-        {% endblock h1 %}
+    <div class="bg-image d-flex justify-content-center align-items-center div-header fondo-1">
+        {% block title %}
+            <h1 class="fw-bolder display-2 text-white p-5 h1-header">Hotel el Jardin Secreto </h1>
+        {% endblock %}
     </div>
-{% endblock header %}
+{% endblock %}
 
 
 {% block content %}
-
+    {% include 'messages.html' %} 
     {% if user.is_authenticated %}
         <h3 class="d-flex align-items-center">Bienvenido {{ user.username }}
             {% if user.infousuario.avatar %}
-                <img src="{{ user.infousuario.avatar.url }}" alt="Avatar" style="height: 30px; width: 30px; border-radius: 50%; object-fit: cover"/> 
+                <img src="{{ user.infousuario.avatar.url }}" class="icono-avatar" alt="Avatar"/> 
             {% else %}
-                <img src="{% static 'img/usuarios/user.png' %}" alt="Avatar" style="height: 30px; width: 30px; border-radius: 50%; object-fit: cover"/>
+                <img src="{% static 'img/usuarios/user.png' %}" class="icono-avatar" alt="Avatar"/>
             {% endif %}  
         </h3>
     {% endif %}
