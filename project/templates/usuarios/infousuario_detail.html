@@ -23,4 +23,6 @@
         <li class="list-group-item"><strong>DNI:</strong> {{ object.dni }}</li>
         <li class="list-group-item"><strong>CUIT:</strong> {{ object.cuit }}</li>
     </ul>
+    {% url 'hotel:index' as url %}
+    {% include 'index_back.html' with link=url %}
 {% endblock content %}

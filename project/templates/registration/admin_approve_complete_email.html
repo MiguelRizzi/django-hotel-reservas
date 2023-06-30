@@ -13,6 +13,8 @@
     {% endblocktrans %}
     <a href="http://{{site.domain}}{% url 'auth_login' %}">{% trans "log in." %}</a>
 </p>
+{% url 'home:index' as url %}
+{% include 'index_back.html' with link=url %}
 </body>
 
 </html>

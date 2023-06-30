@@ -1,13 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h2 class="display-5 mb-4">Detalle de Reseña</h2>
+    <h2 class="fw-bolder display-5 mb-4">Detalle de Reseña</h2>
 
     <div class="d-grid gap-3">
         <div class="card mb-4">
             
             <div class="card-body">
-                <h2 class="card-title border-bottom">{{ object.titulo}}</h2>
+                <h3 class="card-title border-bottom">{{ object.titulo}}</h2>
                 <p class="small text-muted">{{ object.fecha}} por <strong>{{ object.autor}}</strong></p>
                 <p class="card-text"><strong>Calificacion:</strong> 
                     {% if object.calificacion == 1 %}

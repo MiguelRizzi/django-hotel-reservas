@@ -1,1 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");*{box-sizing:border-box;font-family:'Varela Round', sans-serif}.div-header{height:70vh;width:100vw;background-position:center;background-size:cover}.h1-header{width:100vw;text-align:center;background-color:rgba(0,0,0,0.4)}.fondo-1{background-image:url("https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg")}.fondo-2{background-image:url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg")}.icono-avatar{height:30px;width:30px;border-radius:50%;object-fit:cover}
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+/* line 4, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+* {
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* line 11, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+.div-header {
+  height: 60vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 17, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+.h1-header {
+  width: 100vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 22, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+.fondo-header {
+  background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg");
+}
+
+/* line 27, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+.icono-avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #dad9d9;
+}
+
+/*# sourceMappingURL=mis_estilos.css.map */

@@ -5,8 +5,8 @@ from django.utils import timezone
 
 # Create your models here.
 class TipoHabitacion(models.Model):
-    nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=50, unique=True)
+    descripcion = models.CharField(max_length=100, null=True, blank=True)
 
     class Meta:
         verbose_name = "Tipo de habitacion"

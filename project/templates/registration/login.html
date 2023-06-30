@@ -16,6 +16,8 @@
     <div class="d-grid gap-3 mt-4">
         <button type="submit" class="btn btn-success">{% trans 'Login' %}</button>
     </div>
+    {% url 'home:index' as url %}
+    {% include 'index_back.html' with link=url %}
 </form>
 
 <p>{% trans "¿Olvidaste tu contraseña?" %} <a href="{% url 'auth_password_reset' %}">{% trans "Reestablecer contraseña" %}</a>.</p>

@@ -7,6 +7,8 @@
 <p class="alert alert-success">
     {% trans "La cuenta ha sido aprobada ahora." %}
 </p>
+{% url 'home:index' as url %}
+{% include 'index_back.html' with link=url %}
 {% endblock %}
 
 

@@ -7,9 +7,9 @@
 }
 
 // Header
+
 .div-header{
-    
-    height: 70vh; 
+    height: 60vh; 
     width: 100vw; 
     background-position: center; 
     background-size: cover;
@@ -19,11 +19,8 @@
     text-align: center;
     background-color: $fondo-h1; 
 }
-.fondo-1{
-    background-image: url('https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg'); 
-}
-.fondo-2{
-    background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg');
+.fondo-header{
+    background-image: $fondo-header;
 }
 
 // Navbar
@@ -32,4 +29,5 @@
     width: 30px; 
     border-radius: 50%; 
     object-fit: cover;
+    background-color: rgb(218, 217, 217);
 }

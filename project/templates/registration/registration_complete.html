@@ -7,6 +7,8 @@
     <p class="alert alert-success">
         {% trans "Por favor, verifica tu correo electrónico, {{ request.session.registration_email }}, para completar el proceso de registro." %}
     </p>
+    {% url 'home:index' as url %}
+    {% include 'index_back.html' with link=url %}
 {% endblock %}
 
 
