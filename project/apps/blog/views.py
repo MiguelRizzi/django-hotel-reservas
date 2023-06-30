@@ -7,10 +7,10 @@ from .models import Reseña
 from django.contrib import messages
 
 # Create your views here.
-class ReseñaDetail(LoginRequiredMixin, DetailView):
+class ReseñaDetail( DetailView):
     model = Reseña
 
-class ReseñaList(LoginRequiredMixin, ListView):
+class ReseñaList(ListView):
     model = Reseña
     def get_queryset(self):
         """Filtra todas las reseñas cuyo autor contenga el texto ingresado."""

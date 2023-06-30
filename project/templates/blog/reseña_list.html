@@ -32,9 +32,9 @@
                         </p>
                         <p class="card-text">{{ resena.contenido|truncatechars:150 }}</p>
 
-                        <a href="{% url 'blog:reseña_detail' resena.id %}" class="btn btn-secondary">Leer mas</a>
+                        <a href="{% url 'blog:reseña_detail' resena.id %}" class="btn btn-primary">Leer mas</a>
                         {% if resena.autor == user %}
-                            <a href="{% url 'blog:reseña_update' resena.id %}" class="btn btn-primary">Actualizar</a>
+                            <a href="{% url 'blog:reseña_update' resena.id %}" class="btn btn-success">Actualizar</a>
                         {% endif %}
                         {% if user.is_staff or resena.autor == user %}
                             <a href="{% url 'blog:reseña_delete' resena.id %}" class="btn btn-danger">Eliminar</a>

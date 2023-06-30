@@ -24,8 +24,8 @@ class ReservaForm(forms.ModelForm):
         model = models.Reserva
         fields = ['habitacion', 'fecha_entrada', 'fecha_salida']
         widgets = {
-                "habitacion": forms.Select(attrs={"class": "form-control"}),
-                "fecha_entrada": forms.DateInput(attrs={"class": "form-control", "placeholder": "DD/MM/YYYY"}),
-                "fecha_salida": forms.DateInput(attrs={"class": "form-control", "placeholder": "DD/MM/YYYY"}),
+                "habitacion": forms.Select(),
+                "fecha_entrada": forms.DateInput(attrs={"placeholder": "DD/MM/YYYY"}),
+                "fecha_salida": forms.DateInput(attrs={"placeholder": "DD/MM/YYYY"}),
         }
 

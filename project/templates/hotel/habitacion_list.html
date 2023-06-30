@@ -37,11 +37,11 @@
                 <td>Sin imagen</td>
             {% endif %}
             <td>
-                <a href="{% url 'hotel:habitacion_detail' habitacion.id %}" class="btn btn-secondary">Ver detalle</a>
+                <a href="{% url 'hotel:habitacion_detail' habitacion.id %}" class="btn btn-primary">Ver detalle</a>
             </td>
             {% if user.is_staff %} 
                 <td>
-                    <a href="{% url 'hotel:habitacion_update' habitacion.id %}" class="btn btn-primary">Actualizar</a>
+                    <a href="{% url 'hotel:habitacion_update' habitacion.id %}" class="btn btn-success">Actualizar</a>
                 </td>
                 <td>
                     <a href="{% url 'hotel:habitacion_delete' habitacion.id %}" class="btn btn-danger">Eliminar</a>

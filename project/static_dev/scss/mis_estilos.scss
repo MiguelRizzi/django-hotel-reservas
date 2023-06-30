@@ -7,7 +7,6 @@
 }
 
 // Header
-
 .div-header{
     height: 60vh; 
     width: 100vw; 
@@ -24,10 +23,74 @@
 }
 
 // Navbar
-.icono-avatar {
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: $fondo-header;
+}
+.icono-avatar{
     height: 30px; 
     width: 30px; 
     border-radius: 50%; 
-    object-fit: cover;
-    background-color: rgb(218, 217, 217);
+    object-fit: $object-fit-img;
+    background-color: $fondo-icono;
+}
+
+// Imagenes habitaciones y reseñas
+.imagen{
+    object-fit: $object-fit-img;
+}
+.imagen-tarjeta{
+    height: 230px;
+}
+.imagen-habitacion{
+    height: 400px;
+    width: 400px; 
+}
+.imagen-post{
+    height: 400px; 
+}
+
+// Botones bootstrap
+.btn{
+    box-shadow: $sombra;
+}
+.btn-primary {
+    background-color: $color-primary-1;
+    border-color: $color-primary-1;
+}
+.btn-primary:hover {
+    background-color: $color-primary-2;
+    border-color: $color-primary-2;
+}
+.btn-primary:active {
+    background-color: $color-primary-3;
+    border-color: $color-primary-3;
+} 
+.btn-success {
+    background-color: $color-success-1;
+    border-color: $color-success-1;
+}
+.btn-success:hover {
+    background-color: $color-success-2;
+    border-color: $color-success-2;
+}
+.btn-success:active {
+    background-color: $color-success-3;
+    border-color: $color-success-3;
+}
+.btn-danger {
+    background-color: $color-danger-1;
+    border-color: $color-danger-1;
+}
+.btn-danger:hover {
+    background-color: $color-danger-2;
+    border-color: $color-danger-2;
+}
+.btn-danger:active {
+    background-color: $color-danger-3;
+    border-color: $color-danger-3;
 }
