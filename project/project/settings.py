@@ -152,3 +152,25 @@ LOGIN_REDIRECT_URL = "/" # URL de redirección al loguearse
 ACCOUNT_ACTIVATION_DAYS = 7 # Dias de espera para activar el usuario.
 REGISTRATION_AUTO_LOGIN = True # Loguea al usuario automaticamente.
 SITE_ID = 1
+
+
+# debug_toolbar moved here.
+if DEBUG:
+    MIDDLEWARE += [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
+    ]
+    INSTALLED_APPS += [
+        "debug_toolbar",
+    ]
+    INTERNAL_IPS = [
+        "127.0.0.1",
+    ]
+
+    # this is the main reason for not showing up the toolbar
+    import mimetypes
+
+    mimetypes.add_type("application/javascript", ".js", True)
+
+    DEBUG_TOOLBAR_CONFIG = {
+        "INTERCEPT_REDIRECTS": False,
+    }
