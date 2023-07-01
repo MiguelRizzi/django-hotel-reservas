@@ -40,7 +40,8 @@ class Reserva(models.Model):
     precio_total  = models.DecimalField(max_digits=10, decimal_places=2, editable=False)
     
     class Meta:
-        ordering = ("-fecha_entrada",)
+        verbose_name = "Reserva"
+        verbose_name_plural = "Reservas"
 
     def clean(self):
         if self.pk: # Si la reserva ya existe (se está actualizando)

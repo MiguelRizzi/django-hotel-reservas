@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.html import format_html
 
 # Create your models here.
 class Reseña(models.Model):
@@ -19,3 +20,12 @@ class Reseña(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+    def color_calificacion(self):
+        if self.calificacion < 3:
+            return format_html('<span style="color: #ff0000;">{}</span>', self.calificacion)
+        elif self.calificacion == 3:
+            return format_html('<span style="color: #ffa500;">{}</span>', self.calificacion)
+        elif self.calificacion >3:
+            return format_html('<span style="color: #008000;">{}</span>', self.calificacion)
+  
