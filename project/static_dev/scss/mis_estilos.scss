@@ -6,9 +6,29 @@
     font-family: 'Varela Round', sans-serif;
 }
 
+
+// Navbar
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.icono-avatar{
+    height: 30px; 
+    width: 30px; 
+    border-radius: 50%; 
+    object-fit: $object-fit-img;
+    background-color: $fondo-icono;
+}
+
+
 // Header
+#header{
+    height: 80vh !important; 
+}
 .div-header{
-    height: 60vh; 
     width: 100vw; 
     background-position: center; 
     background-size: cover;
@@ -22,24 +42,8 @@
     background-image: $fondo-header;
 }
 
-// Navbar
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: $fondo-header;
-}
-.icono-avatar{
-    height: 30px; 
-    width: 30px; 
-    border-radius: 50%; 
-    object-fit: $object-fit-img;
-    background-color: $fondo-icono;
-}
 
-// Imagenes habitaciones y reseñas
+// Imagenes de habitaciones y reseñas
 .imagen{
     object-fit: $object-fit-img;
 }
@@ -54,10 +58,12 @@
     height: 400px; 
 }
 
+
 // Botones bootstrap
 .btn{
     box-shadow: $sombra;
 }
+//primary
 .btn-primary {
     background-color: $color-primary-1;
     border-color: $color-primary-1;
@@ -70,6 +76,7 @@
     background-color: $color-primary-3;
     border-color: $color-primary-3;
 } 
+//success
 .btn-success {
     background-color: $color-success-1;
     border-color: $color-success-1;
@@ -82,6 +89,7 @@
     background-color: $color-success-3;
     border-color: $color-success-3;
 }
+//danger
 .btn-danger {
     background-color: $color-danger-1;
     border-color: $color-danger-1;

@@ -14820,37 +14820,16 @@ fieldset:disabled .btn {
   font-family: 'Varela Round', sans-serif;
 }
 
-/* line 10, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
-.div-header {
-  height: 60vh;
-  width: 100vw;
-  background-position: center;
-  background-size: cover;
-}
-
-/* line 16, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
-.h1-header {
-  width: 100vw;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* line 21, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
-.fondo-header {
-  background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg");
-}
-
-/* line 26, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 11, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg");
 }
 
-/* line 34, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 18, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .icono-avatar {
   height: 30px;
   width: 30px;
@@ -14859,81 +14838,105 @@ fieldset:disabled .btn {
   background-color: #dad9d9;
 }
 
-/* line 43, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 28, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+#header {
+  height: 80vh !important;
+}
+
+/* line 31, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+.div-header {
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 36, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+.h1-header {
+  width: 100vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 41, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+.fondo-header {
+  background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg");
+}
+
+/* line 47, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .imagen {
   object-fit: cover;
 }
 
-/* line 46, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 50, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .imagen-tarjeta {
   height: 230px;
 }
 
-/* line 49, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 53, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .imagen-habitacion {
   height: 400px;
   width: 400px;
 }
 
-/* line 53, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 57, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .imagen-post {
   height: 400px;
 }
 
-/* line 58, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 63, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn {
   box-shadow: 0 3px 2px -2px #ccc, 0 4px 5px 1px #ccc, 0 2px 7px 1px #ccc;
 }
 
-/* line 61, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 67, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-primary {
   background-color: #0059b3cc;
   border-color: #0059b3cc;
 }
 
-/* line 65, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 71, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-primary:hover {
   background-color: #004d99cc;
   border-color: #004d99cc;
 }
 
-/* line 69, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 75, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-primary:active {
   background-color: #004080cc;
   border-color: #004080cc;
 }
 
-/* line 73, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 80, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-success {
   background-color: #31866d;
   border-color: #31866d;
 }
 
-/* line 77, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 84, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-success:hover {
   background-color: #2b7560;
   border-color: #2b7560;
 }
 
-/* line 81, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 88, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-success:active {
   background-color: #256453;
   border-color: #256453;
 }
 
-/* line 85, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 93, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-danger {
   background-color: #B22222;
   border-color: #B22222;
 }
 
-/* line 89, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 97, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-danger:hover {
   background-color: #9B1B1B;
   border-color: #9B1B1B;
 }
 
-/* line 93, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
+/* line 101, ../tp_diplo_django_inicial/project/static_dev/scss/mis_estilos.scss */
 .btn-danger:active {
   background-color: #841313;
   border-color: #841313;

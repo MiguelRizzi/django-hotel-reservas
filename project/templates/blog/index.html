@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block header %}
-    <div class="bg-image d-flex justify-content-center align-items-center div-header fondo-header">
+    <div class="bg-image d-flex justify-content-center align-items-center div-header fondo-header" style="height:75vh;">
         {% block title %}
             <h1 class="fw-bolder display-2 text-white p-5 h1-header">Blog El Jardin Secreto </h1>
         {% endblock %}
@@ -15,8 +15,8 @@
             <a href="{% url 'blog:reseña_create' %}" class="btn btn-primary">Crear Reseña</a>
             <a href="{% url 'blog:reseña_list' %}" class="btn btn-primary mb-5">Ver Reseñas</a>
         </div>  
+    </div>
 
         {% url 'home:index' as url %}
         {% include 'index_back.html' with link=url %}
-    </div>
 {% endblock content %}

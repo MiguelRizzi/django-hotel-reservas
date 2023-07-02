@@ -20,7 +20,7 @@ class Habitacion(models.Model):
     numero = models.PositiveIntegerField(unique=True)
     precio_x_dia = models.DecimalField(max_digits=10, decimal_places=2,)
     disponible = models.BooleanField(default=False)
-    imagen = models.ImageField(upload_to="img/", null=True, blank=True)
+    imagen = models.ImageField(upload_to="img/hotel", null=True, blank=True)
 
     class Meta:
         verbose_name = "Habitacion"

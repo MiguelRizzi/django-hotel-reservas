@@ -20,12 +20,10 @@ class HabitacionForm(forms.ModelForm):
             }
 
 class ReservaForm(forms.ModelForm):
+    fecha_entrada = forms.DateField(input_formats=['%d/%m/%Y'], widget=forms.DateInput(format='%d/%m/%Y', attrs={"placeholder": "DD/MM/YYYY"}))
+    fecha_salida = forms.DateField(input_formats=['%d/%m/%Y'], widget=forms.DateInput(format='%d/%m/%Y', attrs={"placeholder": "DD/MM/YYYY"}))
+
     class Meta:
         model = models.Reserva
         fields = ['habitacion', 'fecha_entrada', 'fecha_salida']
-        widgets = {
-                "habitacion": forms.Select(),
-                "fecha_entrada": forms.DateInput(attrs={"placeholder": "DD/MM/YYYY"}),
-                "fecha_salida": forms.DateInput(attrs={"placeholder": "DD/MM/YYYY"}),
-        }
-
+    
