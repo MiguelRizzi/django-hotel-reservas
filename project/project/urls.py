@@ -21,10 +21,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.default.urls')),
+    path("captcha/", include("captcha.urls")),
     path("", include(("home.urls", "home"))),
     path("usuarios/", include(("usuarios.urls", "usuarios"))),
     path("hotel/", include(("hotel.urls", "hotel"))),
     path("blog/", include(("blog.urls", "blog"))),
+    path("contacto/", include(("contacto.urls", "contacto"))),
 ] 
 
 # Valido en entorno de desarrollo: DEBUG= True

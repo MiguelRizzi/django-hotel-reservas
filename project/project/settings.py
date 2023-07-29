@@ -53,8 +53,10 @@ INSTALLED_APPS = [
     'usuarios.apps.UsuariosConfig',
     'hotel.apps.HotelConfig',
     'blog.apps.BlogConfig',
+    'contacto.apps.ContactoConfig',
     # Apps de terceros
     'widget_tweaks',
+    'captcha',
 ]
 
 MIDDLEWARE = [
