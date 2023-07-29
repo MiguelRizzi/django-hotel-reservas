@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% load custom_filters %}
 
 {% block content %}
     {% include 'messages.html' %}
@@ -18,17 +19,7 @@
                         <h2 class="card-title border-bottom">{{ resena.titulo}}</h2>
                         <p class="small text-muted">{{ resena.fecha}} por <strong>{{ resena.autor}}</strong></p>
                         <p class="card-text"><strong>Calificacion:</strong> 
-                            {% if resena.calificacion == 1 %}
-                                ⭐
-                            {% elif resena.calificacion == 2 %}
-                                ⭐⭐
-                            {% elif resena.calificacion == 3 %}
-                                ⭐⭐⭐
-                            {% elif resena.calificacion == 4 %}
-                                ⭐⭐⭐⭐
-                            {% else %}
-                                ⭐⭐⭐⭐⭐
-                            {% endif %}
+                            {{ resena.calificacion|calificacion_estrellas }}
                         </p>
                         <p class="card-text">{{ resena.contenido|truncatechars:150 }}</p>
 
