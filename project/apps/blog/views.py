@@ -31,7 +31,7 @@ class ReseñaCreateView(LoginRequiredMixin, CreateView):
         messages.success(self.request, "Reseña creada correctamente.", extra_tags="alert alert-success")
         return super().form_valid(form)
     
-class ReseñaUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class ReseñaUpdate(LoginRequiredMixin, UpdateView):
     model = Reseña
     success_url = reverse_lazy("blog:reseña_list")
     form_class = ReseñaForm
@@ -45,14 +45,14 @@ class ReseñaUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         messages.success(self.request, "Reseña actualizada correctamente.", extra_tags="alert alert-success")
         return super().form_valid(form)
     
-class ReseñaDelete(LoginRequiredMixin, DeleteView):
+class ReseñaDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Reseña
     success_url = reverse_lazy("blog:reseña_list")
 
     def test_func(self):
         """Determina el acceso a la vista, devuelve True si el usuario es el autor de la reseña o si es miembro del staff."""
         reseña = self.get_object()
-        return reseña.autor == self.request.user or self.request.user.is_staff
+        return reseña.autor == self.request.user or self.request.user.has_perm('blog.delete_reseña')
     
     def get_success_url(self):
             messages.success(self.request, "Reseña eliminada correctamente.", extra_tags="alert alert-danger")
