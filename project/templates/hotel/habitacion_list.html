@@ -39,10 +39,12 @@
             <td>
                 <a href="{% url 'hotel:habitacion_detail' habitacion.id %}" class="btn btn-primary">Ver detalle</a>
             </td>
-            {% if user.is_staff %} 
+            {% if perms.hotel.change_habitacion %} 
                 <td>
                     <a href="{% url 'hotel:habitacion_update' habitacion.id %}" class="btn btn-success">Actualizar</a>
                 </td>
+            {% endif %}
+            {% if perms.hotel.delete_habitacion %}
                 <td>
                     <a href="{% url 'hotel:habitacion_delete' habitacion.id %}" class="btn btn-danger">Eliminar</a>
                 </td>

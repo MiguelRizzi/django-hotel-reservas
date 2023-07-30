@@ -27,7 +27,7 @@
                         {% if resena.autor == user %}
                             <a href="{% url 'blog:reseña_update' resena.id %}" class="btn btn-success">Actualizar</a>
                         {% endif %}
-                        {% if user.is_staff or resena.autor == user %}
+                        {% if resena.autor == user or perms.blog.delete_reseña%}
                             <a href="{% url 'blog:reseña_delete' resena.id %}" class="btn btn-danger">Eliminar</a>
                         {% endif %}
                     </div>
