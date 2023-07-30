@@ -23,11 +23,12 @@ Instale las dependencias del proyecto usando el comando `pip install -r requirem
 
 ---
 ## Funcionalidades
-- Registro e inicio de sesión de usuario
-- Personalización del modelo de usuario de Django usando relación uno a uno
+
+- Registro e inicio de sesión de usuario.
+- Personalización del modelo de usuario de Django usando relación uno a uno.
 - Operaciones CRUD para tipos de habitaciones, habitaciones, reservas y reseñas.
-- Permisos para controlar el acceso a las vistas
-- Aplicación de blog para dejar reseñas del hotel
+- Permisos para controlar el acceso a las vistas.
+- Aplicación de blog para dejar reseñas del hotel.
 - Aplicación de contacto para enviar consultas.
 
 ---
@@ -35,4 +36,4 @@ Instale las dependencias del proyecto usando el comando `pip install -r requirem
 
 Para utilizar la aplicación, primero crea una cuenta haciendo clic en el enlace "Registrarse" en la página de inicio. Una vez que tengas una cuenta, puedes iniciar sesión y comenzar a hacer reservas y dejar reseñas.
 
-Para poder realizar operaciones CRUD en los modelos y otorgar permisos a otros usuarios para realizarlas, es necesario crear un superusuario utilizando el comando `python manage.py createsuperuser`. Solo un superusuario o un usuario con permisos puede realizar operaciones CRUD desde el frontend. Una vez creado el superusuario, puedes iniciar sesión con estas credenciales y acceder al panel de administración de Django para gestionar los modelos y los permisos de los usuarios.
+Para poder modificar y eliminar tipos de habitaciones, habitaciones y reservas, así como eliminar reseñas de otros usuarios, es necesario estar autenticado con un superusuario o con un usuario que tenga permisos para hacerlo. Para crear un superusuario, utiliza el comando `python manage.py createsuperuser`. Una vez creado el superusuario, puedes iniciar sesión con estas credenciales y acceder al panel de administración de Django para gestionar los modelos y los permisos de los usuarios
