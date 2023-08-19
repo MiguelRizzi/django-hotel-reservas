@@ -23,14 +23,6 @@ class TipoHabitacionAdmin(admin.ModelAdmin):
     ordering = ("nombre",)
     inlines = [HabitacionInline]
 
-# Acciones para cambiar el estado de habitaciones
-def habitacion_disponible(modeladmin, request, queryset):
-    queryset.update(disponible=True)
-habitacion_disponible.short_description = "Establecer como disponible"
-def habitacion_no_disponible(modeladmin, request, queryset):
-    queryset.update(disponible=False)
-habitacion_no_disponible.short_description = "Establecer como no disponible"
-
 @admin.register(models.Habitacion)
 class HabitacionAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -56,7 +48,23 @@ class HabitacionAdmin(admin.ModelAdmin):
     ordering = ("tipo","-numero",)
     list_display_links=("tipo","numero",)
     inlines = [ReservaInline]
-    actions = [habitacion_disponible, habitacion_no_disponible]
+    actions = ["habitacion_disponible", "habitacion_no_disponible"]
+
+    def set_disponibilidad(self, request, queryset, value):
+        registro = queryset.update(disponible=value)
+        if registro == 1:
+            mensaje = "Registro actualizado"
+        else:
+            mensaje = "%s registros actualizados" % registro
+        self.message_user(request, "%s exitosamente." % mensaje)
+
+    def habitacion_disponible(self, request, queryset):
+        self.set_disponibilidad(request, queryset, True)
+    habitacion_disponible.short_description = "Establecer como disponible"
+
+    def habitacion_no_disponible(self, request, queryset):
+        self.set_disponibilidad(request, queryset, False)
+    habitacion_no_disponible.short_description = "Establecer como no disponible"
 
 @admin.register(models.Reserva)
 class ReservaAdmin(admin.ModelAdmin):
