@@ -23,6 +23,13 @@ class TipoHabitacionAdmin(admin.ModelAdmin):
     ordering = ("nombre",)
     inlines = [HabitacionInline]
 
+# Acciones para cambiar el estado de habitaciones
+def habitacion_disponible(modeladmin, request, queryset):
+    queryset.update(disponible=True)
+habitacion_disponible.short_description = "Establecer como disponible"
+def habitacion_no_disponible(modeladmin, request, queryset):
+    queryset.update(disponible=False)
+habitacion_no_disponible.short_description = "Establecer como no disponible"
 
 @admin.register(models.Habitacion)
 class HabitacionAdmin(admin.ModelAdmin):
@@ -49,7 +56,7 @@ class HabitacionAdmin(admin.ModelAdmin):
     ordering = ("tipo","-numero",)
     list_display_links=("tipo","numero",)
     inlines = [ReservaInline]
-
+    actions = [habitacion_disponible, habitacion_no_disponible]
 
 @admin.register(models.Reserva)
 class ReservaAdmin(admin.ModelAdmin):
