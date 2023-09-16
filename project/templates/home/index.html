@@ -3,10 +3,22 @@
 
 
 {% block header %}
-    <div class="bg-image d-flex justify-content-center align-items-center div-header fondo-header" style="height:75vh;">
+    <div class="row mt-5 bg-image d-flex justify-content-center align-items-center div-header revelar fondo-1 ">
+        <div class="header-home color-header">
         {% block title %}
-            <h1 class="fw-bolder display-2 text-white p-5 h1-header">Hotel el Jardin Secreto </h1>
+            <h1 class="fw-bolder display-2 text-white p-5 mt-5 h1-header revelar">Hotel el Jardin Secreto</h1>
         {% endblock %}
+    
+        <div class="col-lg-6 mx-auto text-center revelar">
+            <p class="lead mb-4 text-white">Bienvenidos al mejor hotel de todo el mundo... <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque asperiores ad aliquam.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="{% url 'hotel:index' %}" class="btn btn-success">Ver Habitaciones</a>
+                <a href="{% url 'blog:index' %}" class="btn btn-primary">Ver Reseñas</a>
+            </div>
+        </div>
+    </div>
     </div>
 {% endblock %}
 
@@ -29,15 +41,43 @@
         </div>
     {% endif %}
 
-    <div>
-        <h2 class="fw-bolder display-5 mb-4">Sobre el Hotel</h2>
+    <div class="mb-5 container-fluid revelar">
+        <h2 class="fw-bolder display-5 mb-4 revelar izquierda">Sobre el Hotel</h2>
 
-        <p class="lead mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, sed vero esse laborum doloribus deleniti maiores unde incidunt recusandae facere odit ex! Reprehenderit qui explicabo temporibus, voluptatem tempore cupiditate natus?. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium aspernatur ex facilis nobis, odio consequatur repellat nemo, quis culpa consectetur veniam debitis dolores et ad perspiciatis! Cupiditate blanditiis dolorem dolore.
-        </p>
-
-        <div class="d-grid gap-3 mt-5">
-            <a href="{% url 'hotel:index' %}" class="btn btn-outline-dark">Ver Habitaciones</a>
+        <div class="row gx-5 align-items-center mb-4">
+            <div class="col-lg-6 lead revelar izquierda">
+                <h3 class="fw-bolder display-6 mb-2">Nuestras Habitaciones</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, sed vero esse laborum doloribus deleniti maiores unde incidunt recusandae facere odit ex! Reprehenderit qui explicabo temporibus, voluptatem tempore cupiditate natus?. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium aspernatur ex facilis nobis, odio consequatur repellat nemo, quis culpa consectetur veniam debitis dolores et ad perspiciatis! Cupiditate blanditiis dolorem dolore.Lorem.
+                </p>
+            </div>
+            <img class="col-lg-6 rounded m-auto revelar derecha" src="https://images.pexels.com/photos/5379219/pexels-photo-5379219.jpeg" alt="Foto Hotel" style="width: 400px; height: 450px; object-fit: cover">
         </div>
+   
+        <div class="row gx-5 align-items-center">
+            
+            <img class="col-lg-6 rounded m-auto revelar izquierda" src="https://images.pexels.com/photos/2607113/pexels-photo-2607113.jpeg" alt="Goto Hotel" style="width: 400px; height: 450px; object-fit: cover">
+
+            <div class="col-lg-6 lead revelar derecha">
+                <h3 class="fw-bolder display-6 mb-2">Nuestros Servicios</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, sed vero esse laborum doloribus deleniti maiores unde incidunt recusandae facere odit ex! Reprehenderit qui explicabo temporibus, voluptatem tempore cupiditate natus?. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium aspernatur ex facilis nobis, odio consequatur repellat nemo, quis culpa consectetur veniam debitis dolor!.
+                </p>
+            </div>
+        </div>
+
+        <div class="row gx-5 align-items-center mt-5">
+            <div class="lead revelar derecha">
+                <h3 class="fw-bolder display-6 mb-2">Como llegar</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, sed vero esse laborum doloribus deleniti maiores unde incidunt recusandae facere odit ex! Reprehenderit qui explicabo temporibus, voluptatem tempore cupiditate natus?. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+            </div>
+            <iframe src="https://maps.google.com/maps?q=tandil&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="height: 400px;" class="w-100 rounded  revelar izquierda"></iframe>
+        </div>
+    </div>
+
+    <div class="d-grid gap-3 mt-3 mb-5">
+        <a href="{% url 'hotel:index' %}" class="btn btn-outline-dark">Ir a Habitaciones</a>
     </div>
 {% endblock %}

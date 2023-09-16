@@ -25,24 +25,28 @@
 
 
 // Header
-#header{
-    height: 80vh !important; 
-}
+
 .div-header{
     width: 100vw; 
     background-position: center; 
     background-size: cover;
 }
+.header-home{
+    height:85vh;
+}
 .h1-header{
     width: 100vw; 
     text-align: center;
-    background-color: $fondo-h1; 
 }
 .fondo-header{
     background-image: $fondo-header;
 }
-
-
+.fondo-1{
+    background-image: url('https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg');
+}
+.color-header{
+    background-color: rgba(0, 0, 0, 0.4);
+}
 // Imagenes de habitaciones y reseñas
 .imagen{
     object-fit: $object-fit-img;
